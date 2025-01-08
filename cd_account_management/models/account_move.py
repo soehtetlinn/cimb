@@ -29,12 +29,10 @@ class AccountMoveLine(models.Model):
     department = fields.Integer('Department')
     agency = fields.Selection([('stamc','STAMC')])
     entity_num = fields.Integer('Entity Number')
-
-class AccountMove(models.Model):
-    _inherit = 'account.move'
-
     working_date = fields.Date('Working Date')
     court_date = fields.Date('Court Date')
+
+
 
 
 

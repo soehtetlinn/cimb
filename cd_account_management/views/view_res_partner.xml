@@ -14,5 +14,21 @@
                 </xpath>
             </field>
         </record>
+        <record id="res_partner_view_search2" model="ir.ui.view">
+            <field name="name">res.partner.view.search.inherit2</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='inactive']" position="before">
+                    <filter string="Lawyer"
+                            name="filter_with_lawyer"
+                            domain="[('is_lawyer', '=', True)]"/>
+                    <filter string="Customer"
+                            name="filter_with_customer"
+                            domain="[('is_customer', '=', True)]"/>
+                    <separator/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
