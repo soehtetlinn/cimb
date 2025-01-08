@@ -16,5 +16,5 @@ class ResPartner(models.Model):
 
     is_lawyer = fields.Boolean('Is Lawyer')
     is_customer = fields.Boolean('Is Customer')
-    lawyer_code = fields.Integer('Lawyer Code')
-    customer_code = fields.Integer('Customer Code')
+    lawyer_code = fields.Char('Lawyer Code')
+    customer_code = fields.Char('Customer Code')
