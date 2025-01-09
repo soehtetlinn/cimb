@@ -23,6 +23,24 @@
                     <field name="working_date"/>
                     <field name="court_date"/>
                 </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='invoice_tab']/field[@name='invoice_line_ids']/list[1]/field[@name='analytic_distribution']" position="attributes">
+                    <attribute name="string">Budget Expense Code</attribute>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='aml_tab']/field[@name='line_ids']/list[1]/field[@name='account_id']" position="attributes">
+                    <attribute name="string">Expense Code</attribute>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='aml_tab']/field[@name='line_ids']/list[1]/field[@name='account_id']" position="after">
+                    <field name="expense_name" optional="show"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='aml_tab']/field[@name='line_ids']/list[1]/field[@name='name']" position="attributes">
+                    <attribute name="string">Withdrawal Details</attribute>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='aml_tab']/field[@name='line_ids']/list[1]/field[@name='analytic_distribution']" position="attributes">
+                    <attribute name="string">Budget Expense Code</attribute>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]" position="after">
+                    <chatter/>
+                </xpath>
                 <xpath expr="//field[@name='invoice_line_ids']/list/field[@name='name']" position="attributes">
                     <attribute name="string">Withdrawal Details</attribute>
                 </xpath>
